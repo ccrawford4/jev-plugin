@@ -1,0 +1,12 @@
+{"id":"single-issues","tags":["single"],"prompt":"List the issues assigned to me in our issue tracker that are currently in progress.","expect":{"servers":["linear"],"skills":[]}}
+{"id":"single-chat","tags":["single"],"prompt":"Search team chat for messages from the last 7 days that mention the release and summarise the main threads.","expect":{"servers":["slack"],"skills":[]}}
+{"id":"single-docs","tags":["single"],"prompt":"Find the internal documentation page for our on-call process and summarise it in 5 bullets.","expect":{"servers":["notion"],"skills":[]}}
+{"id":"single-monitoring","tags":["single"],"prompt":"Are any monitors currently alerting? List up to 5 with their names and status.","expect":{"servers":["datadog"],"skills":[]}}
+{"id":"multi-issue-chat","tags":["multi"],"prompt":"Find my most recently updated issue, then check team chat for any discussion of it in the last two weeks. Summarise both.","expect":{"servers":["linear","slack"],"skills":[]}}
+{"id":"multi-errors-issue","tags":["multi"],"prompt":"Find the service with the most error logs over the last 24 hours, then check whether there is an open issue about it.","expect":{"servers":["datadog","linear"],"skills":[]}}
+{"id":"multi-docs-issues","tags":["multi"],"prompt":"Find the design doc for our onboarding flow and compare it with open issues about onboarding. What is documented but not tracked?","expect":{"servers":["notion","linear"],"skills":[]}}
+{"id":"multi-briefing","tags":["multi"],"prompt":"Give me a morning briefing: alerting monitors, chat threads that mention me from the last day, and my issues due this week.","expect":{"servers":["datadog","slack","linear"],"skills":[]}}
+{"id":"negative-local-file","tags":["negative"],"cwd":".","prompt":"Explain what the README in this directory says, in three bullets.","expect":{"servers":[],"skills":[]}}
+{"id":"negative-knowledge","tags":["negative"],"prompt":"In two sentences, what is the difference between TypeScript's unknown and any types?","expect":{"servers":[],"skills":[]}}
+{"id":"negative-draft-chat","tags":["negative","adversarial"],"prompt":"Draft the text of a short team-chat announcement for our v2 release here in the chat. Do not look anything up or post it.","expect":{"servers":[],"skills":[]}}
+{"id":"negative-explain-monitoring","tags":["negative","adversarial"],"prompt":"Conceptually, what is the difference between a monitor and an SLO? Answer from general knowledge.","expect":{"servers":[],"skills":[]}}

@@ -1,0 +1,23 @@
+{
+  "name": "jev-plugin",
+  "version": "0.1.0",
+  "description": "Shadow-mode Jev routing for the Pi coding agent, plus a benchmark to compare Pi with and without it",
+  "type": "module",
+  "keywords": ["pi-package", "pi", "jev", "mcp", "openrouter"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccrawford4/jev-plugin.git"
+  },
+  "pi": {
+    "extensions": ["./extensions/jev-router.ts"]
+  },
+  "scripts": {
+    "bench": "node bench/bench.mjs"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}
